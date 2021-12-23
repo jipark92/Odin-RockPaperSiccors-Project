@@ -1,26 +1,80 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Odin Rock Paper Siccors Project</title>
+    <title>Odin Rock Paper Siccor Project</title>
 </head>
 <body>
     <script>
         //function to call random values from computer player
-       function computerPlay() {
-           randomResult = Math.floor(Math.random() * 3) + 1; // numbers 1 to 3 represents rock,paper,siccors.
-           if (randomResult == "1") {
-               console.log("Rock")
-           }
-           else if (randomResult == "2") {
-               console.log("Paper")
-           }
-           else {
-               console.log("Siccors")
-           }
-       }
+        function computerPlay() {
+            randomComputerChoice = Math.floor(Math.random() * 3) + 1; // numbers 1-3 represents rock,paper,siccor.
+            if (randomComputerChoice == "1") {
+                return "rock";
+            }
+            else if (randomComputerChoice == "2") {
+                return "paper"
+            }
+            else { 
+                return "siccor"
+            }
+        }
 
-       
+        function playerPlay() {
+            let playerChoice = prompt("what hand would you like to play")
+            if (playerChoice == "rock") {
+                return "rock"
+            } 
+            else if (playerChoice == "paper") {
+                return "paper"
+            }
+            else if (playerChoice == "siccor") {
+                return "siccor"
+            }
+            else {
+                return "Invalid hand, please type rock,paper,siccor"
+            }
+        }
+
+        function playRound (playerSelection, computerSelection) {
+            computerSelection = computerPlay();
+            playerSelection = playerPlay();
+
+            //TIE
+            if (playerSelection == "rock" && computerSelection == "rock") {
+                console.log ("ITS A TIE!")
+            }
+            else if (playerSelection == "paper" && computerSelection == "paper") {
+                console.log ("ITS A TIE!")
+            }
+            else if (playerSelection == "siccor" && computerSelection == "siccor") {
+                console.log ("ITS A TIE!")
+            }
+
+            //WIN
+            else if ( playerSelection == "rock" && computerSelection == "siccor"){
+                console.log("YOU WON! Rock beats Siccor!")
+            }
+            else if ( playerSelection == "paper" && computerSelection == "rock"){
+                console.log("YOU WON! Paper beats rock!")
+            }
+            else if ( playerSelection == "siccor" && computerSelection == "paper"){
+                console.log("YOU WON! Siccor beats paper!")
+            }
+
+            //LOSE
+            else if ( playerSelection == "siccor" && computerSelection == "rock"){
+                console.log("YOU LOST! Rock loses to Siccor!")
+            }
+            else if ( playerSelection == "rock" && computerSelection == "paper"){
+                console.log("YOU LOST! Rock loses to paper!")
+            }
+            else if ( playerSelection == "paper" && computerSelection == "siccor"){
+                console.log("YOU LOST! Paper loses to siccor!")
+            }
+
+        }
+
     </script>
+
 </body>
 </html>
-
