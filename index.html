@@ -21,6 +21,7 @@
 
         function playerPlay() {
             let playerChoice = prompt("what hand would you like to play")
+            playerChoice = playerChoice.toLowerCase();
             if (playerChoice == "rock") {
                 return "rock"
             } 
@@ -41,39 +42,45 @@
 
             //TIE
             if (playerSelection == "rock" && computerSelection == "rock") {
-                console.log ("ITS A TIE!")
+                return "ITS A TIE!"
             }
             else if (playerSelection == "paper" && computerSelection == "paper") {
-                console.log ("ITS A TIE!")
+                return "ITS A TIE!"
             }
             else if (playerSelection == "siccor" && computerSelection == "siccor") {
-                console.log ("ITS A TIE!")
+                return "ITS A TIE!"
             }
+            
 
             //WIN
             else if ( playerSelection == "rock" && computerSelection == "siccor"){
-                console.log("YOU WON! Rock beats Siccor!")
+                return "YOU WON! Rock beats siccor!"
             }
             else if ( playerSelection == "paper" && computerSelection == "rock"){
-                console.log("YOU WON! Paper beats rock!")
+                return "YOU WON! Paper beats rock!"
             }
             else if ( playerSelection == "siccor" && computerSelection == "paper"){
-                console.log("YOU WON! Siccor beats paper!")
+                return "YOU WON! Siccor beats paper!"
             }
 
             //LOSE
             else if ( playerSelection == "siccor" && computerSelection == "rock"){
-                console.log("YOU LOST! Rock loses to Siccor!")
+                return "YOU LOST! Siccor is weaker than rock!"
             }
             else if ( playerSelection == "rock" && computerSelection == "paper"){
-                console.log("YOU LOST! Rock loses to paper!")
+                return "YOU LOST! Rock is weaker than paper!"
             }
             else if ( playerSelection == "paper" && computerSelection == "siccor"){
-                console.log("YOU LOST! Paper loses to siccor!")
+                return "YOU LOST! Paper is weaker than siccor!"
             }
-
+            else {
+                return "Type in the correct hand sign: Rock, Paper, or Siccor"
+            }
         }
 
+        function game(){
+
+        }
     </script>
 
 </body>
