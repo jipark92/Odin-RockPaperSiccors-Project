@@ -4,13 +4,13 @@
     <title>Odin Rock Paper Siccor Project</title>
 </head>
 <body>
+
+    <h1> brb walking my dog</h1>
     <script>
-        
+        // this variables sets the initial value of scores 
         let compScore = 0;
         let playerScore = 0;
         let tieRounds = 0;
-
-
 
         //function to call random hand sign from computer player
         function computerPlay() {
@@ -45,7 +45,7 @@
                 return "siccor"
             }
             else {
-                return "Invalid hand, please type rock,paper,siccor"
+            0    return "Invalid hand, please type rock,paper,siccor"
             }
         }
 
@@ -112,28 +112,36 @@
                 return "Type in the correct hand sign: Rock, Paper, or Siccor"
             }
         }
-
+        
+        //Function to run the game 5 times and tracks the score of player and computer.
         function game(){
 
-          
-
-            
-            for (let i=0; i < 5; i++) {
+            for (let i=0; i < 5; i++) { //this loops around 5 times for the game.
                 playRound();      
             }
+
+            // this displays the total point
             console.log(compScore);
             console.log(playerScore);
             console.log(tieRounds);
 
+            // This compares the scores to determine the winner or call for a tie.
+            // if computer score is more than player score then the result is YOU LOST
             if (compScore > playerScore){
                 console.log("Computer WINS! YOU LOST!")
             }
-
+            
+            // if computer score is less than player score then the result is YOU WON
             else if ( compScore < playerScore)  {
                 console.log("YOU WON! CONGRATS!")
             }
+            // if computer score is the same as the player score then the result is a TIE
             else if (compScore == playerScore) {
                 console.log("ITS A TIE!")
+            }
+            // if there is any error it will tell you to try again
+            else {
+                console.log("TRY AGAIN!")
             }
             
             
