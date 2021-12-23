@@ -7,7 +7,8 @@
     <script>
         
         let compScore = 0;
-            let playerScore = 0;
+        let playerScore = 0;
+        let tieRounds = 0;
 
 
 
@@ -59,12 +60,15 @@
 
             //TIE
             if (playerSelection == "rock" && computerSelection == "rock") {
+                tieRounds++;
                 return "ITS A TIE!"
             }
             else if (playerSelection == "paper" && computerSelection == "paper") {
+                tieRounds++;
                 return "ITS A TIE!"
             }
             else if (playerSelection == "siccor" && computerSelection == "siccor") {
+                tieRounds++;
                 return "ITS A TIE!"
             }
             
@@ -111,7 +115,7 @@
 
         function game(){
 
-        
+          
 
             
             for (let i=0; i < 5; i++) {
@@ -119,7 +123,19 @@
             }
             console.log(compScore);
             console.log(playerScore);
+            console.log(tieRounds);
 
+            if (compScore > playerScore){
+                console.log("Computer WINS! YOU LOST!")
+            }
+
+            else if ( compScore < playerScore)  {
+                console.log("YOU WON! CONGRATS!")
+            }
+            else if (compScore == playerScore) {
+                console.log("ITS A TIE!")
+            }
+            
             
         }
     </script>
