@@ -1,0 +1,25 @@
+.game-button{
+    background-color: black;
+    text-align: center;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+.rock{
+    color: red;
+    padding: 10px;
+    margin: 5px;
+
+}
+
+.paper {
+    color: blue;
+    padding: 10px;
+    margin: 5px;
+}
+
+.siccors{
+    color: green;
+    padding: 10px;
+    margin: 5px;
+}
