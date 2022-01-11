@@ -1,30 +1,3 @@
-const buttonRock = document.querySelector('.rock');
-const buttonPaper = document.querySelector('.paper');
-const buttonSiccors = document.querySelector('.siccors');
-        
-    buttonRock.addEventListener('click', () => {
-    playRound();
-  });
-
-
-  buttonPaper.addEventListener('click', () => {
-    playRound();
-  });
-
-
-
-  buttonSiccors.addEventListener('click', () => {
-    playRound();
-  });
-
-
-
-
-
-
-
-
-
 
 
 
