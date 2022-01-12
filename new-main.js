@@ -43,6 +43,7 @@ function playerPlayRock (computerSelection,playerSelection) {
     computerSelection = computerPlay();
     playerSelection = playerChoiceRock;
 
+    
 
 
     if (playerSelection == "rock" && computerSelection == "rock") {
@@ -64,6 +65,7 @@ function playerPlayRock (computerSelection,playerSelection) {
         playerCurrentScore.textContent = playerScore;
     }
     finalResult();
+    resetGame();
     console.log("Player Score:", playerScore, "Computer Score:",  computerScore);
 }
     
@@ -133,6 +135,23 @@ function finalResult() {
     }
     else if (computerScore == 5) {
         finalGameResult.textContent = "YOU LOST!!!";
+    }
+    else if (computerScore == 5 && playerScore ==5){
+        finalGameResult.textContent = "ITS A TIE!!!";
+    }
+}
+
+function resetGame () {
+    if (playerScore == 5 || computerScore == 5) {
+        playerScore = 0;
+        computerScore = 0;
+        playerCurrentScore.textContent = playerScore;
+        computerCurrentScore.textContent = computerScore;
+        currentGameResult.textContent = "";
+    }     
+    else{
+        finalGameResult.textContent = "";
+
     }
 }
 
