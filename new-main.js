@@ -51,10 +51,14 @@ function playerPlayRock (computerSelection,playerSelection) {
     else if (playerSelection == "rock" && computerSelection == "paper"){
         console.log("you lost!");
         computerScore++;
+        computerCurrentScore.textContent = computerScore;
+        
+        
     }
     else if (playerSelection == "rock" && computerSelection =="siccors") {
         console.log("you won!");
         playerScore++;
+        playerCurrentScore.textContent = playerScore;
     }
     
     console.log("Player Score:", playerScore, "Computer Score:",  computerScore);
@@ -71,6 +75,7 @@ function playerPlayPaper (computerSelection,playerSelection) {
     if (playerSelection == "paper" && computerSelection == "rock") {
         console.log("You win!");
         playerScore++;
+        playerCurrentScore.textContent = playerScore;
     }
     else if (playerSelection == "paper" && computerSelection == "paper"){
         console.log("Its a tie!");
@@ -79,6 +84,7 @@ function playerPlayPaper (computerSelection,playerSelection) {
     else if (playerSelection == "paper" && computerSelection =="siccors") {
         console.log("You lost!");
         computerScore++;
+        computerCurrentScore.textContent = computerScore;
         
     }
     
@@ -95,10 +101,12 @@ function playerPlaySiccors (computerSelection,playerSelection) {
     if (playerSelection == "siccors" && computerSelection == "rock") {
         console.log("You lost!");
         computerScore++;
+        computerCurrentScore.textContent = computerScore;
     }
     else if (playerSelection == "siccors" && computerSelection == "paper"){
         console.log("You win!");
         playerScore++;
+        playerCurrentScore.textContent = playerScore;
     }
     else if (playerSelection == "siccors" && computerSelection =="siccors") {
         console.log("Its a tie!");
@@ -110,6 +118,9 @@ function playerPlaySiccors (computerSelection,playerSelection) {
 }
 
 
+
+const playerCurrentScore = document.querySelector('.player-score');
+const computerCurrentScore = document.querySelector('.computer-score');
 
 
 
