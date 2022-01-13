@@ -1,3 +1,10 @@
+body {
+    background-color: gray;
+    margin: 0px;
+    
+    
+}
+
 .game-button{
     background-color: black;
     text-align: center;

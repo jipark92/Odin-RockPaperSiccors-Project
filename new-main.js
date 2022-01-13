@@ -47,11 +47,11 @@ function playerPlayRock (computerSelection,playerSelection) {
 
 
     if (playerSelection == "rock" && computerSelection == "rock") {
-        console.log("Its a tie!");
+        
         currentGameResult.textContent = "Its a tie!";
     }
     else if (playerSelection == "rock" && computerSelection == "paper"){
-        console.log("you lost!");
+        
         currentGameResult.textContent = "You lost!";
         computerScore++;
         computerCurrentScore.textContent = computerScore;
@@ -59,14 +59,14 @@ function playerPlayRock (computerSelection,playerSelection) {
         
     }
     else if (playerSelection == "rock" && computerSelection =="siccors") {
-        console.log("you won!");
+        
         currentGameResult.textContent = "You won!";
         playerScore++;
         playerCurrentScore.textContent = playerScore;
     }
     finalResult();
     resetGame();
-    console.log("Player Score:", playerScore, "Computer Score:",  computerScore);
+    
 }
     
 
@@ -78,25 +78,26 @@ function playerPlayPaper (computerSelection,playerSelection) {
 
 
     if (playerSelection == "paper" && computerSelection == "rock") {
-        console.log("You win!");
+        
         currentGameResult.textContent = "You won!";
         playerScore++;
         playerCurrentScore.textContent = playerScore;
     }
     else if (playerSelection == "paper" && computerSelection == "paper"){
-        console.log("Its a tie!");
+        
         currentGameResult.textContent = "Its a tie!";
         
     }
     else if (playerSelection == "paper" && computerSelection =="siccors") {
-        console.log("You lost!");
+        
         currentGameResult.textContent = "You lost!";
         computerScore++;
         computerCurrentScore.textContent = computerScore;
         
     }
+    finalResult();
+    resetGame();
     
-    console.log("Player Score:", playerScore, "Computer Score:",  computerScore);
 }
 
 function playerPlaySiccors (computerSelection,playerSelection) {  
@@ -107,26 +108,26 @@ function playerPlaySiccors (computerSelection,playerSelection) {
 
 
     if (playerSelection == "siccors" && computerSelection == "rock") {
-        console.log("You lost!");
+        
         currentGameResult.textContent = "You lost!";
         computerScore++;
         computerCurrentScore.textContent = computerScore;
     }
     else if (playerSelection == "siccors" && computerSelection == "paper"){
-        console.log("You win!");
+        
         currentGameResult.textContent = "You won!";
         playerScore++;
         playerCurrentScore.textContent = playerScore;
     }
     else if (playerSelection == "siccors" && computerSelection =="siccors") {
-        console.log("Its a tie!");
+        
         currentGameResult.textContent = "Its a tie!";
 
-        
-        
-    }
     
-    console.log("Player Score:", playerScore, "Computer Score:",  computerScore);
+    }
+    finalResult();
+    resetGame();
+    
 }
 
 function finalResult() {
