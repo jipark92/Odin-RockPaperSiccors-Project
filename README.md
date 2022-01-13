@@ -1,4 +1,4 @@
 # Odin-RockPaperSiccors-Project
 
 
-In this project I will use to current skills i have learned to build a functioning console based rock paper siccors game. 
+For this project, I will be using what I have learned so far to create a playable rock paper siccors game against a computer. I will be using DOM manipulation through javescript and lots of css edits.
