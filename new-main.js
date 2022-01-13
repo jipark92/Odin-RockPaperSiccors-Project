@@ -132,10 +132,10 @@ function playerPlaySiccors (computerSelection,playerSelection) {
 
 function finalResult() {
     if (playerScore == 5){
-        finalGameResult.textContent = "YOU WIN!!!";
+        finalGameResult.textContent = "YOU WON!!! CONGRATS!!!";
     }
     else if (computerScore == 5) {
-        finalGameResult.textContent = "YOU LOST!!!";
+        finalGameResult.textContent = "YOU LOST TO COMPUTER!";
     }
     else if (computerScore == 5 && playerScore ==5){
         finalGameResult.textContent = "ITS A TIE!!!";
