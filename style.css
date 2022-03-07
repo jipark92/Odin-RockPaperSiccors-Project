@@ -128,7 +128,6 @@ body {
     font-weight: bold;;
 }
 
-
 .player-score {
     color: orangered;
     font-weight: bold;
@@ -140,8 +139,6 @@ body {
     font-weight: bold;
     font-size: 18px;
 }
-
-
 
 .final-result {
     font-size: 30px;
